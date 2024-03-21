@@ -25,9 +25,12 @@
         <button on:click={handleNewTask}>Add Task</button>
         <button on:click={removeCompletedTasks}>Remove Completed Tasks</button>
     </div>
-    <p>{error}</p>
+    <p class="error">{error}</p>
 </div>
 
 <style>
-
+    .error {
+        color: red;
+        font-weight: bold;
+    }
 </style>
