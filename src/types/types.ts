@@ -1,4 +1,4 @@
-export type TaskList = {
+export type Task = {
     task: string,
     status: boolean
 }
