@@ -12,5 +12,13 @@ const addTask = (newTask: string) => {
     })
 }
 
+const deleteTask = (task:string) => {
+    TaskStore.update(tasks => {
+        return tasks.filter(t => {
+            return task === t.task
+        })
+    })
+}
 
-export {TaskStore, addTask}
+
+export {TaskStore, addTask, deleteTask}
