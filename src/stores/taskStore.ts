@@ -32,5 +32,13 @@ const changeStatus = (details:Task) => {
     })
 }
 
+const removeCompletedTasks = () => {
+    TaskStore.update(tasks => {
+        return tasks.filter(task => {
+            return task.status !== true
+        })
+    })
+}
 
-export {TaskStore, addTask, deleteTask, changeStatus}
+
+export {TaskStore, addTask, deleteTask, changeStatus, removeCompletedTasks}
