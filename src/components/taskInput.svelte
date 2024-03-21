@@ -1,10 +1,11 @@
 <script lang="ts">
-    import {addTask, deleteTask, removeCompletedTasks} from '../stores/taskStore'
+    import {TaskStore, addTask, deleteTask, removeCompletedTasks} from '../stores/taskStore'
     $: newTask =''
     let error: string = ''
 
     const handleNewTask = () => {
         if (!checkForErrors()) {
+            newTask = newTask.trim();
             addTask(newTask)
         }
         newTask = ''
@@ -12,10 +13,20 @@
 
     const checkForErrors = () => {
         if (newTask === '') {
-            error = 'Task cannot be empty'
+            error = 'TASK CANNOT BE EMPTY'
+            return true
+        }
+        if (isDuplicate()){
+            error = 'TASK ALREADY EXISTS'
             return true
         }
         error = ''
+    }
+
+    const isDuplicate = () => {
+        return $TaskStore.some(task => {
+            return task.task === newTask
+        })
     }
 </script>
 
