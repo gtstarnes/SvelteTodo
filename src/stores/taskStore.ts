@@ -20,5 +20,17 @@ const deleteTask = (task:string) => {
     })
 }
 
+const changeStatus = (details:Task) => {
+    const {task, status} = details
+    TaskStore.update(tasks => {
+        return tasks.map(t => {
+            if (t.task === task) {
+                return {...t, status: !status}
+            }
+            return t
+        })
+    })
+}
 
-export {TaskStore, addTask, deleteTask}
+
+export {TaskStore, addTask, deleteTask, changeStatus}
