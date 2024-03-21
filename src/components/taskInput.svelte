@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {TaskStore, addTask, deleteTask, removeCompletedTasks} from '../stores/taskStore'
+    import {TaskStore, addTask, removeCompletedTasks} from '../stores/taskStore'
     $: newTask =''
     let error: string = ''
 
