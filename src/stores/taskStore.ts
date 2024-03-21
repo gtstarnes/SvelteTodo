@@ -1,7 +1,7 @@
 import { writable } from "svelte/store";
-import type { TaskList } from "../types/types";
+import type { Task } from "../types/types";
 
-const initial: TaskList[] = []
+const initial: Task[] = []
 
 const TaskStore = writable(initial);
 
