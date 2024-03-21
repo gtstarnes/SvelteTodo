@@ -34,7 +34,7 @@
     <div>
         <input type="text" placeholder="Add a task" bind:value={newTask}/>
         <button on:click={handleNewTask}>Add Task</button>
-        <button on:click={removeCompletedTasks}>Remove Completed Tasks</button>
+        <button class="remove" on:click={removeCompletedTasks}>Remove Completed Tasks</button>
     </div>
     <p class="error">{error}</p>
 </div>
@@ -43,5 +43,13 @@
     .error {
         color: red;
         font-weight: bold;
+    }
+    .remove {
+        background-color: red;
+        border-radius: 2px;
+        outline: inherit;
+        border: none;
+        padding: 2.8px;
+        cursor: pointer;
     }
 </style>
