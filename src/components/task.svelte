@@ -4,7 +4,7 @@
     export let taskDetails:Task;
 </script>
 
-<div>
+<div class="task">
     <input type="checkbox" on:change={() => changeStatus(taskDetails)} />
     <p class:checked={taskDetails.status}>{taskDetails.task}</p>
     <button on:click={() => deleteTask(taskDetails.task)}>Delete</button>
@@ -13,5 +13,10 @@
 <style>
     .checked {
         text-decoration: line-through;
+    }
+    .task {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
     }
 </style>
