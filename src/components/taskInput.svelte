@@ -1,10 +1,11 @@
 <script lang="ts">
-
+    import {addTask, deleteTask} from '../stores/taskStore'
+    $: newTask =''
 </script>
 
 <div>
-    <input type="text" placeholder="Add a task" />
-    <button>Add Task</button>
+    <input type="text" placeholder="Add a task" bind:value={newTask}/>
+    <button on:click={() => addTask(newTask)}>Add Task</button>
 </div>
 
 <style>
