@@ -5,7 +5,7 @@
 
 
 <footer>
-
+    <div>Copyright © {currentYear}</div>
 </footer>
 
 <style>
