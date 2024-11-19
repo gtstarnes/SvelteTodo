@@ -1,6 +1,8 @@
 <script lang='ts'>
+// IMPORTS
     import type { Task } from "../types/types"
     import {deleteTask, changeStatus} from "../stores/taskStore"
+// VARIABLES
     export let taskDetails:Task;
 </script>
 
@@ -16,7 +18,13 @@
     }
     .task {
         display: flex;
-        width: 80%;
+        width: 100%;
         justify-content: space-between;
+        margin-bottom: 1rem;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    button {
+        cursor: pointer;
     }
 </style>
