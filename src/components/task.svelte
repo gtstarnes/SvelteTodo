@@ -15,6 +15,7 @@
 <style>
     .checked {
         text-decoration: line-through;
+        color: grey;
     }
     .task {
         display: flex;
@@ -26,5 +27,7 @@
     }
     button {
         cursor: pointer;
+        background-color: red;
+        font-weight: bold;
     }
 </style>
