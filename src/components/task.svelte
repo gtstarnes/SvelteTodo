@@ -6,6 +6,7 @@
     export let taskDetails:Task;
 </script>
 
+<!--Contains checkbox, task, delete button for each task-->
 <div class="task">
     <input type="checkbox" on:change={() => changeStatus(taskDetails)} />
     <p class:checked={taskDetails.status}>{taskDetails.task}</p>
