@@ -3,10 +3,10 @@
 	import TaskList from "../components/taskList.svelte";
 </script>
 
-<main>
+<div>
     <TaskInput />
     <TaskList />
-</main>
+</div>
 
 <style>
     
